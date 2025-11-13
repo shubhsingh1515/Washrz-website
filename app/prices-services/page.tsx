@@ -256,7 +256,7 @@ export default function PricesServices() {
             viewport={{ once: true }}
           >
             {[
-              { title: "Free 48h Delivery", icon: "🚗" },
+              { title: "Free 24h Delivery", icon: "🚗" },
               { title: "No Minimum Order", icon: "📦" },
               { title: "Quality Guaranteed", icon: "⭐" },
               { title: "WhatsApp Booking", icon: "💬" },

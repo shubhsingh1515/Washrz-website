@@ -124,7 +124,7 @@ export function LocationHero({ location, subtitle, highlights }: LocationHeroPro
            {/* --- TEXT OVERLAY --- */}
            <div className="absolute inset-0 flex items-start justify-center pt-6">
          <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-3xl font-bold drop-shadow-2xl">
-           Shoe Spa Services in Delhi-NCR
+           Shoe Spa Services in {location}
          </h2>
        </div>
        

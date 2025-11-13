@@ -44,7 +44,7 @@ export default function HowItWorks() {
       number: "3",
       title: "We Clean & Deliver",
       description:
-        "Our professional team cleans your items and delivers them back within 48 hours, fresh and ready to wear.",
+        "Our professional team cleans your items and delivers them back within 24 hours, fresh and ready to wear.",
       icon: "🚗",
       color: "from-teal-100 to-teal-50",
     },

@@ -78,8 +78,6 @@ export function Navigation() {
               >
                 Book on WhatsApp
               </motion.a>
-
-              {/* ⭐ Mobile Hamburger */}
               <button
                 onClick={() => setMenuOpen(true)}
                 className="md:hidden p-2 rounded-md border border-border"
