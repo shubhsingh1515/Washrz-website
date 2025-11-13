@@ -9,9 +9,9 @@ export default function LocationLayout({
 }) {
   return (
     <main className="min-h-screen bg-background">
-      <Navigation />
+     
       {children}
-      <Footer />
+    
     </main>
   )
 }

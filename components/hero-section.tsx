@@ -51,11 +51,13 @@ export function HeroSection() {
         transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
         className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
       />
+
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
         className="absolute top-1/3 right-1/4 w-40 h-40 border border-primary/5 rounded-full"
       />
+
       <motion.div
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
@@ -85,15 +87,16 @@ export function HeroSection() {
 
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <motion.a
-            href="https://api.whatsapp.com/send/?phone=919717953316&text=Hi&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+              href="https://api.whatsapp.com/send/?phone=919717953316&text=Hi&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-primary to-accent text-primary-foreground text-base px-8 py-3 rounded-full font-medium hover:opacity-90 transition-all shadow-lg"
             >
               Book Your 24-Hr Pickup on WhatsApp
             </motion.a>
+
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.05)" }}
               whileTap={{ scale: 0.95 }}
@@ -110,25 +113,43 @@ export function HeroSection() {
                 <span className="font-semibold text-foreground">4.8/5</span> Based on 7,000+ Reviews
               </span>
             </motion.div>
+
             <div className="hidden sm:block w-px h-4 bg-border"></div>
+
             <span className="text-foreground/70">Serving Delhi, Gurgaon, Noida & Ghaziabad</span>
           </motion.div>
         </motion.div>
 
-        <motion.div variants={item} className="mt-16 w-full max-w-2xl relative group">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-            className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-0 group-hover:opacity-30 transition-opacity blur-xl"
-          />
-          <div className="relative h-96 bg-gradient-to-br from-primary/15 to-accent/15 rounded-3xl overflow-hidden border-2 border-primary/20 group-hover:border-accent/40 transition-all">
-            <img
-              src="/professional-dry-cleaning-service.jpg"
-              alt="Washrz dry cleaning service showcase"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
+       {/* ⭐ VIDEO BLOCK */}
+<motion.div variants={item} className="mt-2 w-full max-w-3xl relative group">
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+    className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-0 group-hover:opacity-30 transition-opacity blur-xl"
+  />
+
+  <div className="relative h-120 bg-gradient-to-br from-primary/15 to-accent/15 rounded-3xl overflow-hidden border-2 border-primary/20 group-hover:border-accent/40 transition-all">
+
+    {/* --- VIDEO --- */}
+    <video
+      src="/shoe-spa.mp4"
+      autoPlay
+      loop
+      
+      playsInline
+      className="w-full h-full object-cover"
+    ></video>
+
+    {/* --- TEXT OVERLAY --- */}
+    <div className="absolute inset-0 flex items-start justify-center pt-6">
+  <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-3xl font-bold drop-shadow-2xl">
+    Shoe Spa Services in Delhi-NCR
+  </h2>
+</div>
+
+  </div>
+</motion.div>
+
       </div>
     </section>
   )

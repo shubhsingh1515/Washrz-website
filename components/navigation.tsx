@@ -40,13 +40,13 @@ export function Navigation() {
             </Link>
             <div className="hidden md:flex items-center gap-6">
               <a
-                href="#how-it-works"
+                href="/how-it-works"
                 className=" text-foreground/70 hover:text-primary transition-colors"
               >
                 How it Works
               </a>
               <a
-                href="#services"
+                href="/prices-services"
                 className=" text-foreground/70 hover:text-primary transition-colors"
               >
                 Services
@@ -72,16 +72,16 @@ export function Navigation() {
                 </div>
               </div>
               <a
-                href="#why-us"
+                href="/about-us"
                 className=" text-foreground/70 hover:text-primary transition-colors"
               >
-                Why Us
+                About Us
               </a>
               <a
-                href="#testimonials"
+                href="/blogs"
                 className=" text-foreground/70 hover:text-primary transition-colors"
               >
-                Reviews
+                Blogs
               </a>
             </div>
           </div>

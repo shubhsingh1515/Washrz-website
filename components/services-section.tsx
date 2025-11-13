@@ -114,7 +114,7 @@ export function ServicesSection() {
                 />
 
                 <motion.div
-                  className="absolute -top-5 -right-5 text-4xl"
+                  className="absolute -top-3 -right-4 text-4xl"
                   animate={{ scale: [0, 1, 0] }}
                   transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
                 >

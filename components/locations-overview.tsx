@@ -96,12 +96,12 @@ export function LocationsOverview() {
                     <h3 className="text-2xl font-bold text-foreground mb-2">{location.name}</h3>
                     <p className="text-sm text-foreground/70">{location.description}</p>
                   </div>
-                  <motion.div
+                  {/* <motion.div
                     whileHover={{ rotate: 45, scale: 1.1 }}
                     className={`w-12 h-12 rounded-lg bg-gradient-to-br ${location.color} flex items-center justify-center text-foreground-foreground opacity-80`}
                   >
                     <ArrowRight size={20} />
-                  </motion.div>
+                  </motion.div> */}
                 </div>
 
                 <div className="flex-1 mb-6">
@@ -115,7 +115,7 @@ export function LocationsOverview() {
                         className="flex items-center gap-2"
                       >
                         <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${location.color}`} />
-                        <span className="text-xs text-foreground/80">{highlight}</span>
+                        <span className="text-sm text-foreground/80">{highlight}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -123,7 +123,7 @@ export function LocationsOverview() {
 
                 <Link
                   href={`/locations/${location.name.toLowerCase()}`}
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r ${location.color} text-xs font-medium text-background hover:shadow-lg transition-all w-fit`}
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent  text-sm font-medium text-background hover:shadow-lg transition-all w-fit`}
                 >
                   Explore {location.name}
                   <ArrowRight size={14} />

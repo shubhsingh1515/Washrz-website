@@ -104,7 +104,7 @@ export function WhyUsSection() {
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="text-base font-semibold text-foreground mb-3">{feature.title}</h3>
-                    <p className="text-xs text-foreground/70 leading-relaxed">{feature.description}</p>
+                    <p className="text-sm text-foreground/70 leading-relaxed">{feature.description}</p>
                     <motion.div
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}

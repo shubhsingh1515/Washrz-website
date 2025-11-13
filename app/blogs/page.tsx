@@ -16,7 +16,7 @@ const item = {
 
 export default function BlogListPage() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-background via-card to-background py-20 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-background via-card to-background py-10 overflow-hidden">
       {/* Floating ambient background */}
       <motion.div
         animate={{ y: [0, -40, 0], x: [0, 20, 0] }}
@@ -57,20 +57,26 @@ export default function BlogListPage() {
                   {blog.date}
                 </span>
               </div>
-              <div className="p-6 flex flex-col justify-between h-52">
-                <div>
-                  <h2 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition">
-                    {blog.title}
-                  </h2>
-                  <p className="text-sm text-foreground/70">{blog.excerpt}</p>
-                </div>
-                <Link
-                  href={`/blogs/${blog.slug}`}
-                  className="mt-4 inline-block bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition"
-                >
-                  Read More
-                </Link>
-              </div>
+            <div className="p-6 flex flex-col justify-between h-52">
+  <div>
+    <h2 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition">
+      {blog.title}
+    </h2>
+    <p className="text-sm text-foreground/70">{blog.excerpt}</p>
+  </div>
+
+ <div className="mt-4">
+  <Link
+    href={`/blogs/${blog.slug}`}
+    className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-4 py-1.5 rounded-full text-xs font-medium hover:opacity-90 transition w-auto"
+  >
+    Read More
+    <span className="text-lg leading-none">→</span>
+  </Link>
+</div>
+
+</div>
+
             </motion.div>
           ))}
         </motion.div>
