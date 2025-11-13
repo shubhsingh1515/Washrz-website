@@ -69,7 +69,7 @@ export function CtaSection() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-white text-primary text-sm md:text-base px-8 md:px-12 py-3 md:py-4 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-xl"
+              className="bg-white text-primary text-sm md:text-base px-2 md:px-12 py-3 md:py-4 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-xl"
             >
               Get 20% Off - Book Now on WhatsApp
             </motion.a>

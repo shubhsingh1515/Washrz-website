@@ -101,20 +101,35 @@ export function LocationHero({ location, subtitle, highlights }: LocationHeroPro
           </motion.div>
         </motion.div>
 
-        <motion.div variants={item} whileHover={{ scale: 1.02 }} className="mt-16 w-full max-w-2xl relative group">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-            className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity blur"
-          />
-          <div className="relative h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl overflow-hidden border border-primary/20 group-hover:border-accent/40 transition-all">
-            <img
-              src="/professional-dry-cleaning-service-in-city.jpg"
-              alt={`Washrz dry cleaning service in ${location}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
+            {/* ⭐ VIDEO BLOCK */}
+       <motion.div variants={item} className="mt-2 w-full max-w-3xl relative group">
+         <motion.div
+           animate={{ rotate: 360 }}
+           transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+           className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-3xl opacity-0 group-hover:opacity-30 transition-opacity blur-xl"
+         />
+       
+         <div className="relative h-120 bg-gradient-to-br from-primary/15 to-accent/15 rounded-3xl overflow-hidden border-2 border-primary/20 group-hover:border-accent/40 transition-all">
+       
+           {/* --- VIDEO --- */}
+           <video
+             src="/shoe-spa.mp4"
+             autoPlay
+             loop
+             
+             playsInline
+             className="w-full h-full object-cover"
+           ></video>
+       
+           {/* --- TEXT OVERLAY --- */}
+           <div className="absolute inset-0 flex items-start justify-center pt-6">
+         <h2 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-3xl font-bold drop-shadow-2xl">
+           Shoe Spa Services in Delhi-NCR
+         </h2>
+       </div>
+       
+         </div>
+       </motion.div>
       </div>
     </section>
   )

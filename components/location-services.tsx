@@ -45,7 +45,7 @@ export function LocationServices({ location }: LocationServicesProps) {
   const services = servicesByLocation[location as keyof typeof servicesByLocation] || servicesByLocation.Delhi
 
   return (
-    <section className="py-24 bg-gradient-to-br from-card/30 to-background">
+    <section className="py-10 bg-gradient-to-br from-card/30 to-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export function LocationServices({ location }: LocationServicesProps) {
                   {service.icon}
                 </motion.div>
                 <h3 className="text-base font-semibold text-foreground mb-2">{service.title}</h3>
-                <p className="text-xs text-foreground/70 mb-4">{service.desc}</p>
+                <p className="text-sm text-foreground/70 mb-4">{service.desc}</p>
                 <motion.div
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}

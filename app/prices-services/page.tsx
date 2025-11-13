@@ -158,7 +158,7 @@ export default function PricesServices() {
                     ))}
                   </ul>
                   <motion.button
-                    className="w-full bg-slate-700 text-white py-2 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
+                    className="w-full bg-gradient-to-r from-primary to-accent text-white py-2 rounded-lg font-semibold hover:bg-slate-800 transition-colors"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -185,7 +185,7 @@ export default function PricesServices() {
                     <span className="text-4xl">{service.icon}</span>
                     <div>
                       <h3 className="text-xl font-bold text-slate-900">{service.name}</h3>
-                      <div className="text-2xl font-bold text-slate-900">{service.price}</div>
+                      {/* <div className="text-2xl font-bold text-slate-900">{service.price}</div> */}
                     </div>
                   </div>
                   <motion.div
