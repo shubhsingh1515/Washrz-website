@@ -96,7 +96,7 @@ export function Footer() {
               Washrz
             </Link>
 
-            <p className="text-sm opacity-70 mb-6">
+            <p className="text-sm opacity-70 mb-6 lg:pr-8">
               India&apos;s only 24-hour dry cleaning and shoe spa service.
             </p>
 
