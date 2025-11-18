@@ -1,21 +1,21 @@
-"use client"
+import { Metadata } from "next";
+import NoidaClient from "./NoidaClient";
 
-import { LocationHero } from "@/components/location-hero"
-import { LocationServices } from "@/components/location-services"
-import { LocationTestimonials } from "@/components/location-testimonials"
-import { CtaSection } from "@/components/cta-section"
+export const metadata: Metadata = {
+  title: "Dry Cleaning in Noida | Washrz",
+  description:
+    "24-hour dry cleaning & laundry services in Noida. Free pickup & delivery across Noida.",
+  keywords:
+    "dry cleaning Noida, laundry Noida, shoe spa Noida, 24 hour laundry Noida",
+  openGraph: {
+    title: "Dry Cleaning in Noida | Washrz",
+    description:
+      "Premium dry cleaning and shoe spa services in Noida with 24-hour turnaround.",
+    url: "https://washrz.com/locations/noida",
+    type: "website",
+  },
+};
 
 export default function NoidaPage() {
-  return (
-    <div className="space-y-0">
-      <LocationHero
-        location="Noida"
-        subtitle="Expert Dry Cleaning & Laundry Services in Noida"
-        highlights={["Same-Day Service Available", "Stain Removal Specialists", "Bulk Discounts"]}
-      />
-      <LocationServices location="Noida" />
-      <LocationTestimonials location="Noida" />
-      <CtaSection />
-    </div>
-  )
+  return <NoidaClient />;
 }

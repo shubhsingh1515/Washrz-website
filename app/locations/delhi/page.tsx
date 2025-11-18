@@ -1,20 +1,21 @@
-"use client"
-import { LocationHero } from "@/components/location-hero"
-import { LocationServices } from "@/components/location-services"
-import { LocationTestimonials } from "@/components/location-testimonials"
-import { CtaSection } from "@/components/cta-section"
+import { Metadata } from "next";
+import DelhiClient from "./DelhiClient";
+
+export const metadata: Metadata = {
+  title: "Dry Cleaning in Delhi | Washrz",
+  description:
+    "24-hour dry cleaning, laundry and shoe spa services across Delhi. Free home pickup and delivery with eco-friendly solvents.",
+  keywords:
+    "dry cleaning Delhi, laundry Delhi, shoe spa Delhi, Washrz Delhi, 24 hour dry cleaning",
+  openGraph: {
+    title: "Dry Cleaning in Delhi | Washrz",
+    description:
+      "Premium 24-hour dry cleaning, laundry and shoe spa across Delhi. Free pickup & delivery.",
+    url: "https://washrz.com/locations/delhi",
+    type: "website",
+  },
+};
 
 export default function DelhiPage() {
-  return (
-    <div className="space-y-0">
-      <LocationHero
-        location="Delhi"
-        subtitle="Premium Dry Cleaning & Shoe Spa across Delhi"
-        highlights={["24-Hour Service", "Free Pickup & Delivery", "Eco-Friendly Solvents"]}
-      />
-      <LocationServices location="Delhi" />
-      <LocationTestimonials location="Delhi" />
-      <CtaSection />
-    </div>
-  )
+  return <DelhiClient />;
 }

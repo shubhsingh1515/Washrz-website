@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { blogs } from "./data"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { blogs } from "./data";
 
 const container = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
-}
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
+};
 
 const item = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-}
+};
 
 export default function BlogListPage() {
   return (
@@ -39,7 +42,12 @@ export default function BlogListPage() {
           The Washrz Blog
         </motion.h1>
 
-        <motion.div variants={container} initial="hidden" animate="visible" className="grid md:grid-cols-2 gap-10">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="grid md:grid-cols-2 gap-10"
+        >
           {blogs.map((blog, i) => (
             <motion.div
               key={i}
@@ -57,30 +65,28 @@ export default function BlogListPage() {
                   {blog.date}
                 </span>
               </div>
-            <div className="p-6 flex flex-col justify-between h-52">
-  <div>
-    <h2 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition">
-      {blog.title}
-    </h2>
-    <p className="text-sm text-foreground/70">{blog.excerpt}</p>
-  </div>
+              <div className="p-6 flex flex-col justify-between h-52">
+                <div>
+                  <h2 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition">
+                    {blog.title}
+                  </h2>
+                  <p className="text-sm text-foreground/70">{blog.excerpt}</p>
+                </div>
 
- <div className="mt-4">
-  <Link
-    href={`/blogs/${blog.slug}`}
-    className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-4 py-1.5 rounded-full text-xs font-medium hover:opacity-90 transition w-auto"
-  >
-    Read More
-    <span className="text-lg leading-none">→</span>
-  </Link>
-</div>
-
-</div>
-
+                <div className="mt-4">
+                  <Link
+                    href={`/blogs/${blog.slug}`}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent text-white px-4 py-1.5 rounded-full text-xs font-medium hover:opacity-90 transition w-auto"
+                  >
+                    Read More
+                    <span className="text-lg leading-none">→</span>
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

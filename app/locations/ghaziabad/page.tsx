@@ -1,21 +1,21 @@
-"use client"
+import { Metadata } from "next";
+import GhaziabadClient from "./GhaziabadClient";
 
-import { LocationHero } from "@/components/location-hero"
-import { LocationServices } from "@/components/location-services"
-import { LocationTestimonials } from "@/components/location-testimonials"
-import { CtaSection } from "@/components/cta-section"
+export const metadata: Metadata = {
+  title: "Dry Cleaning in Ghaziabad | Washrz",
+  description:
+    "24-hour premium dry cleaning, laundry and shoe spa services in Ghaziabad. Free pickup & delivery in Indirapuram, Vaishali, Kaushambi & more.",
+  keywords:
+    "dry cleaning Ghaziabad, laundry Ghaziabad, shoe spa Ghaziabad, 24 hour laundry Ghaziabad",
+  openGraph: {
+    title: "Dry Cleaning in Ghaziabad | Washrz",
+    description:
+      "Fast, eco-friendly dry cleaning and laundry in Ghaziabad with 24-hour delivery.",
+    url: "https://washrz.com/locations/ghaziabad",
+    type: "website",
+  },
+};
 
 export default function GhaziabadPage() {
-  return (
-    <div className="space-y-0">
-      <LocationHero
-        location="Ghaziabad"
-        subtitle="Quality Dry Cleaning in Ghaziabad"
-        highlights={["Affordable Pricing", "Student Discounts", "Quick Turnaround"]}
-      />
-      <LocationServices location="Ghaziabad" />
-      <LocationTestimonials location="Ghaziabad" />
-      <CtaSection />
-    </div>
-  )
+  return <GhaziabadClient />;
 }
